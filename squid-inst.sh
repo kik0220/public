@@ -1,4 +1,4 @@
-wget -O squid.conf https://docs.google.com/uc?id=0B-L9O92t2c4GUklPeUZQQlJhSGM
+wget -O squid.conf https://raw.github.com/kik0220/public/master/squid.conf
 nano squid.conf
 sudo yum install squid -y
 sudo mv /etc/squid/squid.conf /etc/squid/squid.conf_org

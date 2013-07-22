@@ -2,9 +2,7 @@
   function main() {
     addThisButton();
     document.addEventListener("DOMSubtreeModified",function(event) {
-      if( event.target.id === "section0_column0" ) {
-        setTimeout(addThisButton(), 3000);
-      }
+      setTimeout(addThisButton(), 3000);
     });
   }
   function addThisButton() {
@@ -35,9 +33,7 @@
       addThisPosition.appendChild(addThisScript);
       try{
         addthis.toolbox(document.getElementById(addThisDiv.id), {},{ url : inlineTitle[0].href, title : inlineTitle[0].innerText});
-      } catch(e) {
-//        console.log(e);
-      }
+      } catch(e) {}
     }
   }
   main();

@@ -1,36 +1,43 @@
 (function(){
-  function main(){
-    if(parent!==self){
-      return;
+  function main() {
+    addThisButton();
+    document.addEventListener("DOMSubtreeModified",function(event) {
+      if( event.target.id === "section0_column0" ) {
+        setTimeout(addThisButton(), 3000);
+      }
+    });
+  }
+  function addThisButton() {
+    var inlineFrames = document.getElementsByClassName('u100Frame');
+    if( inlineFrames.length < 1){
+      inlineFrames = document.getElementsByClassName('inlineFrame');
     }
-    if(document.location.href.indexOf('//cloud.feedly.com/') === -1){
-      return;
-    }
-    var inlFrms=document.getElementsByClassName('u100Frame');
-    if(inlFrms.length < 1){
-      inlFrms=document.getElementsByClassName('inlineFrame');
-    }
-    for(var i=0;i<inlFrms.length;i++){
-      var inlFrm=inlFrms[i];
-      if( inlFrm.getElementsByClassName('atUnOfi').length > 0){
+    for(var i = 0; i < inlineFrames.length; i++){
+      var inlineFrame=inlineFrames[i];
+      if( inlineFrame.getElementsByClassName('addThisUnOfficial').length > 0){
         continue;
       }
-      var inlTtl=inlFrm.getElementsByClassName('entryTitle');
-      console.log(inlTtl);
-      if( inlTtl.length<1){
+      var inlineTitle = inlineFrame.getElementsByClassName('entryTitle');
+      if( inlineTitle.length < 1) {
         continue;
       }
-      var atPos=inlFrm.getElementsByClassName('abZone')[0];
-      var atD=document.createElement('div');
-      atD.id=inlFrm.id+'_atUnOfi';
-      atD.className='addthis_toolbox addthis_default_style atUnOfi';
-      atPos.parentNode.appendChild(atD);
-      atD.innerHTML='<a class="addthis_button_compact"></a>';
-      var atS=document.createElement('script');
-      atS.type='text/javascript';
-      atS.src='//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-51db39db77a83636&domready=1';
-      atPos.parentNode.appendChild(atS);
-      addthis.toolbox(document.getElementById(atD.id),{},{url:inlTtl[0].href,title:inlTtl[0].innerText});
+      var addThisPosition = inlineFrame.getElementsByClassName('abZone')[0].parentNode;
+      var addThisDiv = document.createElement('div');
+      addThisDiv.id = inlineFrame.id+'_addThisUnOfficial';
+      addThisDiv.className = 'addthis_toolbox addthis_default_style addThisUnOfficial';
+      addThisPosition.appendChild( addThisDiv);
+      var addThisLink = document.createElement('a');
+      addThisLink.className = 'addthis_button_compact';
+      addThisDiv.appendChild( addThisLink);
+      var addThisScript = document.createElement('script');
+      addThisScript.type = 'text/javascript';
+      addThisScript.src = '//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-51db39db77a83636&domready=1';
+      addThisPosition.appendChild(addThisScript);
+      try{
+        addthis.toolbox(document.getElementById(addThisDiv.id), {},{ url : inlineTitle[0].href, title : inlineTitle[0].innerText});
+      } catch(e) {
+//        console.log(e);
+      }
     }
   }
   main();

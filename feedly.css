@@ -1,6 +1,5 @@
+@-moz-document domain("feedly.com"){
 /*Feedly Simple Style http://userstyles.org/styles/90167/feedly-simple-style*/
-@namespace url(http://www.w3.org/1999/xhtml);
-@-moz-document domain("cloud.feedly.com") {
 /* side bar */
 .target.selected{
 font-weight:bold !important;
@@ -35,9 +34,7 @@ margin:0 !important;
 .entryBody{
 line-height:1.2em !important;
 }
-}
 /*uS]Feedly google reader like http://userstyles.org/styles/89438/us-feedly-google-reader-like*/
-@-moz-document domain("feedly.com") {
 #feedlyFrame { width : 100% !important;}
 #sideArea, #systemBar, .bottomWikiWidget {
 display: none !important;
@@ -144,9 +141,7 @@ margin: 0px!important;
 #recommentationAreaHeadlines>div { width:28% !important; }
 #recommentationAreaHeadlines .topRecommendedEntry { width: 100% !important; }
 BODY.home { background: #FFFFFF  !important;  }
-}
 /*Feedly Full Width - Google Style Navigation Bar http://userstyles.org/styles/84683/feedly-full-width-google-style-navigation-bar*/
-@-moz-document domain("feedly.com"){
 /*Fonts and Theme*/
 *{ font-family: Arial!important;}
 /*layouts*/

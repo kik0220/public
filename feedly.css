@@ -1,4 +1,3 @@
-@-moz-document domain("feedly.com"){
 /*Feedly Simple Style http://userstyles.org/styles/90167/feedly-simple-style*/
 /* side bar */
 .target.selected{
@@ -250,5 +249,4 @@ margin-bottom: 10px!important;
 #feedlyTabsHolder .favicon,
 #feedlyTabsHolder:hover .favicon{
 opacity: 1!important;
-}
 }

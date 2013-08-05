@@ -1,10 +1,7 @@
 [Adblock Plus 1.1]
 ! Title: Easy modify List + Japanese Filter
-![Adblock Plus 2.0]
-! Checksum: hGkE2+txeNnxi/YLMsKvRg
-! Version: 201308051411
-! Title: EasyList
-! Last modified: 05 Aug 2013 14:11 UTC
+! Update: 2013-08-06
+! Last modified: 05 Aug 2013 15:21 UTC
 ! Expires: 4 days (update frequency)
 ! Homepage: https://easylist.adblockplus.org/
 ! Licence: https://easylist-downloads.adblockplus.org/COPYING
@@ -12,7 +9,6 @@
 ! Please report any unblocked adverts or problems
 ! in the forums (http://forums.lanik.us/)
 ! or via e-mail (easylist.subscription@gmail.com).
-!
 !
 !-----------------------General advert blocking filters-----------------------!
 ! *** easylist:easylist/easylist_general_block.txt ***
@@ -1561,6 +1557,7 @@
 /ads/iframe
 /ads/image/*
 /ads/images/*
+/ads/imbox-
 /ads/img/*
 /ads/index-
 /ads/indexsponsors/*
@@ -4090,6 +4087,7 @@
 /scripts/ads.
 /scripts/ads/*
 /scripts/afc/*
+/scripts/zanox-
 /scrollads/*
 /search-ads?
 /search.php?uid=*.*&src=
@@ -6244,6 +6242,7 @@ _popunder+$popup
 ###ad-728x90-leaderboard-top
 ###ad-728x90-top
 ###ad-728x90-top0
+###ad-88-wrap
 ###ad-970
 ###ad-a
 ###ad-a1
@@ -6708,6 +6707,7 @@ _popunder+$popup
 ###adLocation-3
 ###adLocation-4
 ###adLounge
+###adMOBILETOP
 ###adMPU
 ###adMagAd
 ###adMarketplace
@@ -9859,6 +9859,7 @@ _popunder+$popup
 ###main_AD
 ###main_ad
 ###main_ads
+###main_col > #center_col div[style="font-size:14px;margin:0 4px;padding:1px 5px;background:#fff7ed"]
 ###main_rec_ad
 ###main_top_ad
 ###main_top_ad_container
@@ -13577,6 +13578,7 @@ _popunder+$popup
 ##.adspace_buysell
 ##.adspace_rotate
 ##.adspace_skyscraper
+##.adspace_top
 ##.adspacer
 ##.adspan
 ##.adspanel
@@ -14857,6 +14859,7 @@ _popunder+$popup
 ##.double_adsense
 ##.double_click_widget
 ##.doubleclick-ad
+##.doubleclick_adtype
 ##.download-ad
 ##.downloadAds
 ##.download_ad
@@ -17529,6 +17532,7 @@ _popunder+$popup
 ##a[href^="http://games.ucoz.ru/"][target="_blank"]
 ##a[href^="http://greensmoke.com/"]
 ##a[href^="http://install.securewebsiteaccess.com/"]
+##a[href^="http://keep2share.cc/pr/"]
 ##a[href^="http://latestdownloads.net/download.php?"]
 ##a[href^="http://lp.ilivid.com/"]
 ##a[href^="http://lp.ncdownloader.com/"]
@@ -17603,6 +17607,8 @@ _popunder+$popup
 ##img[alt^="Fuckbook"]
 ##input[onclick^="window.open('http://www.FriendlyDuck.com/AF_"]
 ##input[onclick^="window.open('http://www.friendlyduck.com/AF_"]
+! https://adblockplus.org/forum/viewtopic.php?f=2&t=17016
+##.l-container > #fishtank
 ! Google
 ###center_col > div[style="font-size:14px;margin-right:0;min-height:5px"] > div[style="font-size:14px;margin:0 4px;padding:1px 5px;background:#fff8e7"]
 ###cnt #center_col > #res > #topstuff > .ts
@@ -17993,7 +17999,7 @@ associatedcontent.com#@#.header_ad_center
 kidzworld.com#@#.header_advert
 plugcomputer.org#@#.headerad
 haaretz.com#@#.headerads
-iedrc.org#@#.home-ad
+gnc.co.uk,iedrc.org#@#.home-ad
 questapartments.com.au#@#.homeAd
 worldsnooker.com#@#.homead
 straighttalk.com#@#.homepage_ads
@@ -18063,6 +18069,7 @@ nfl.com#@#.tower-ad
 nytimes.com#@#.wideAd
 britannica.com,cam4.com#@#.withAds
 weather.yahoo.com#@#.yom-ad
+vdevelopments.co.uk#@#a[href*="/adrotate/adrotate-out.php?"]
 people.com,techrepublic.com,time.com#@#a[href^="http://ad.doubleclick.net/"]
 adultfriendfinder.com#@#a[href^="http://adultfriendfinder.com/p/register.cgi?pid="]
 marketgid.com,mgid.com#@#a[href^="http://marketgid.com"]
@@ -18998,6 +19005,7 @@ bitcoiner.net#@##ad-top
 ||doubleclick.net/adx/wn.loc.$third-party
 ||doubleclick.net/adx/wn.nat.$third-party
 ||doubleclick.net/N2/pfadx/video.wsj.com/$third-party
+||doubleclick.net/N5202/pfadx/cmn_livemixtapes/$third-party
 ||doubleclick.net/N6088/pfadx/ssp.kshb/$third-party
 ||doubleclick.net/N6872/pfadx/shaw.mylifetimetv.ca/$third-party
 ||doubleclick.net/pfadx/*.BLIPTV/$third-party
@@ -20438,6 +20446,7 @@ bitcoiner.net#@##ad-top
 ||smaato.net^$third-party
 ||tapjoyads.com^$third-party
 ||waptrick.com^$third-party
+||yieldmo.com^$third-party
 ! Non-English (instead of whitelisting ads)
 ||adhood.com^$third-party
 ! *** easylist:easylist/easylist_adservers_popup.txt ***
@@ -22312,7 +22321,7 @@ bitcoiner.net#@##ad-top
 ||surf100sites.com/images/banner_
 ||surveymonkey.com/jspop.aspx?$third-party
 ||surveywriter.net^$script,third-party
-||svcs.ebay.com/services/search/FindingService/*^affiliate.trackingId=$third-party,domain=~geo-ship.com
+||svcs.ebay.com/services/search/FindingService/*^affiliate.tracking$third-party
 ||swarmjam.com^$script,third-party
 ||sweed.to/?pid=$third-party
 ||sweed.to/affiliates/
@@ -22996,7 +23005,6 @@ bitcoiner.net#@##ad-top
 ||xdating.com/search/$popup,third-party
 ||xvideoslive.com/?AFNO$popup,third-party
 ||xvideoslive.com/landing/$popup,third-party
-||yourvoyeurvideos.com^$popup,third-party
 ||yuvutu.com^$popup,third-party
 !----------------------Specific advert blocking filters-----------------------!
 ! *** easylist:easylist/easylist_specific_block.txt ***
@@ -23636,6 +23644,7 @@ bitcoiner.net#@##ad-top
 ||danycode.com/adv/
 ||darknet.org.uk/images/125x125-hostedby.jpg
 ||darknet.org.uk/images/elearn_125_125.jpg
+||dasfdasfasdf.no-ip.info^$domain=unfair.co
 ||datafilehost.com/img/DFH_Bnr.png
 ||datamation.com/sl/assetlisting/?
 ||datpiff.com/skins/misc/
@@ -26999,7 +27008,7 @@ about.com,paidcontent.org###adL
 smh.com.au###adSpotholder-EGN
 washingtonpost.com###adTiff
 ebay.com###adVcss
-360haven.com,candlepowerforums.com,droidforums.net,filesharingtalk.com,gsmindore.com,hongfire.com,justskins.com,lotoftalks.com,moneymakerdiscussion.com,mpgh.net,nextgenupdate.com,partyvibe.com,ps3iso.com,runedream.org,thriveforums.org,watchuseek.com,webmastertalkforums.com,win8heads.com###ad_global_below_navbar
+360haven.com,apnadesi-tv.net,candlepowerforums.com,droidforums.net,filesharingtalk.com,gsmindore.com,hongfire.com,justskins.com,lotoftalks.com,moneymakerdiscussion.com,mpgh.net,nextgenupdate.com,partyvibe.com,ps3iso.com,runedream.org,thriveforums.org,watchdesitv.com,watchuseek.com,webmastertalkforums.com,win8heads.com###ad_global_below_navbar
 girlgames.com###adaptv_ad_player_div
 phonezoo.com###adbb
 nowsci.com###adblocker
@@ -27033,7 +27042,7 @@ inc.com###adoptionsimg
 yahoo.com###adposition-TOCSS
 mp3skull.com###adr_banner
 mp3skull.com###adr_banner_2
-909lifefm.com,anichart.net,audioreview.com,daemon-tools.cc,dreadcentral.com,duckduckgo.com,eveningecho.ie,financenews.co.uk,gearculture.com,genevalunch.com,hdcast.tv,healthboards.com,isearch-for.com,lyricstime.com,mobilerevamp.org,mtbr.com,playr.org,privack.com,quiz4fun.com,quote.com,theindustry.cc,tvope.com,washingtonmonthly.com,wccftech.com###ads
+909lifefm.com,anichart.net,audioreview.com,daemon-tools.cc,dreadcentral.com,duckduckgo.com,eveningecho.ie,financenews.co.uk,gearculture.com,genevalunch.com,hdcast.tv,healthboards.com,isearch-for.com,lyricstime.com,mobilerevamp.org,mtbr.com,playr.org,privack.com,quiz4fun.com,quote.com,theindustry.cc,toorgle.net,tvope.com,washingtonmonthly.com,wccftech.com###ads
 release-ddl.com,womanowned.com###ads3
 chia-anime.com###ads4
 chia-anime.com###ads8
@@ -27110,6 +27119,7 @@ pcworld.com###apcDesktopAd
 cultofmac.com###apptapArticleBottom
 bizjournals.com###arcbc1
 archlinux.org###arch-sponsors
+boingboing.net###ards
 torrentreactor.net###are-you-going-to-download
 philly.com###area-main-center-road-block
 joe.ie###area10-banner
@@ -27273,6 +27283,7 @@ blackbookmag.com###bb-splash
 egreetings.com###bb-title
 about.com###bb34
 akihabaranews.com###bbTop
+nzherald.co.nz###bbWrapper
 polodomains.com###bbannertop
 bbc.com###bbccom_bottom[style="width:468px; text-align:right;"]
 bbc.com###bbccom_button
@@ -27933,7 +27944,7 @@ fusible.com,justpushstart.com###footer-widgets
 whatifeelishot.com###footer-wrapper
 thewhir.com###footer2
 livegoals.com###footer4
-eventfinda.com,eventfinda.sg,eventfinder.co.nz,eventfinder.com.au,freewebtemplates.com###footerBanner
+eventfinda.com,eventfinda.sg,eventfinder.co.nz,eventfinder.com.au,fixya.com,freewebtemplates.com###footerBanner
 pcworld.com###footerRight
 usatoday.com###footerSponsorOne
 usatoday.com###footerSponsorTwo
@@ -28547,6 +28558,7 @@ mercurynews.com###mn_SP_Links
 dllme.com###mobile-insert
 bit-tech.net###mobile-phones-co-uk-120
 pcpro.co.uk###mobile_app_developers
+longreads.com###mobile_banner
 philly.com###mod-storytext
 ciao.co.uk###mod_ph_merchoffer
 mail.yahoo.com###modal-upsell
@@ -29554,7 +29566,7 @@ scoop.co.nz###topHeader
 chacha.com###topHeaderBannerWrap
 pcadvisor.co.uk###topLeaderContainer
 sacurrent.com,startribune.com###topLeaderboard
-autotrader.co.uk,topmarques.co.uk###topLeaderboardContainer
+autotrader.co.uk,fixya.com,topmarques.co.uk###topLeaderboardContainer
 chamberofcommerce.com###topLeaderboardParent
 teoma.com###topPaidList
 topsite.com###topRightBunner
@@ -29977,7 +29989,7 @@ daijiworld.com##.a2
 knowyourmeme.com##.a250x250
 cnet.com##.a2[style="padding-top: 20px;"]
 twitch.tv,twitchtv.com##.a300
-animeflv.net,animeid.com,chia-anime.com,knowyourmeme.com##.a300x250
+animeflv.net,animeid.com,chia-anime.com,knowyourmeme.com,politicususa.com##.a300x250
 animeid.com##.a728
 localtiger.com##.a9gy_lt
 tvnz.co.nz##.aPopup
@@ -30052,7 +30064,7 @@ jokeroo.com##.admb
 experienceproject.com##.adn
 iskullgames.com##.adr300
 zercustoms.com##.adrh
-abajournal.com,aljazeerasport.asia,altavista.com,arcadeprehacks.com,birdforum.net,coinad.com,cuzoogle.com,cyclingweekly.co.uk,cyprus-mail.com,domainnamenews.com,eco-business.com,facemoods.com,flashx.tv,foxnews.com,freetvall.com,friendster.com,fstoppers.com,furaffinity.net,gentoo.org,gmanetwork.com,govtrack.us,gramfeed.com,html5test.com,isearch.whitesmoke.com,itproportal.com,kingdomrush.net,laptopmag.com,livetvcafe.net,manga-download.org,maps.google.com,mb.com.ph,mmajunkie.com,movies-online-free.net,myfitnesspal.com,panorama.am,pastie.org,phpbb.com,playboy.com,pocket-lint.com,previously.tv,reason.com,searchfunmoods.com,sourceforge.net,talkradioeurope.com,thecambodiaherald.com,thejakartapost.com,thelakewoodscoop.com,theyeshivaworld.com,tiberium-alliances.com,today.com,tubeserv.com,turner.com,twogag.com,ultimate-guitar.com,washingtonpost.com,womanandhome.com,wtvz.net,yahoo.com,yuku.com##.ads
+abajournal.com,aljazeerasport.asia,altavista.com,arcadeprehacks.com,birdforum.net,coinad.com,cuzoogle.com,cyclingweekly.co.uk,cyprus-mail.com,domainnamenews.com,eco-business.com,facemoods.com,flashx.tv,foxnews.com,freetvall.com,friendster.com,fstoppers.com,furaffinity.net,gentoo.org,gmanetwork.com,govtrack.us,gramfeed.com,html5test.com,isearch.whitesmoke.com,itproportal.com,kingdomrush.net,laptopmag.com,livetvcafe.net,manga-download.org,maps.google.com,mb.com.ph,mmajunkie.com,movies-online-free.net,myfitnesspal.com,nbcnews.com,panorama.am,pastie.org,phpbb.com,playboy.com,pocket-lint.com,previously.tv,reason.com,searchfunmoods.com,sourceforge.net,talkradioeurope.com,thecambodiaherald.com,thejakartapost.com,thelakewoodscoop.com,theyeshivaworld.com,tiberium-alliances.com,today.com,tubeserv.com,turner.com,twogag.com,ultimate-guitar.com,washingtonpost.com,womanandhome.com,wtvz.net,yahoo.com,yuku.com##.ads
 glarysoft.com##.ads + .search-list
 searchfunmoods.com##.ads + ul > li
 overstock.com##.ads-cars-larger
@@ -30403,6 +30415,7 @@ tucsoncitizen.com##.bigbox_container
 caller.com,commercialappeal.com,courierpress.com,gosanangelo.com,govolsxtra.com,independentmail.com,kitsapsun.com,knoxnews.com,naplesnews.com,redding.com,reporternews.com,tcpalm.com,timesrecordnews.com,vcstar.com##.bigbox_wrapper
 exclaim.ca##.bigboxhome
 motherjones.com,pep.ph,todaysbigthing.com##.billboard
+bre.ad##.billboard-body
 yelp.be,yelp.ca,yelp.ch,yelp.co.nz,yelp.co.uk,yelp.com,yelp.com.au,yelp.com.sg,yelp.ie##.biz-details-add
 slate.com##.bizbox_promo
 arsenalnews.co.uk##.bkmrk_pst_flt
@@ -30742,7 +30755,6 @@ funny.com##.ctnAdBanner
 homefinder.com##.cubeContainer
 cramit.in##.curved_box_no_shadow[style="width:977px;"]
 santacruzsentinel.com##.curvyBox600
-news.com.au##.custom-html
 malwarehelp.org##.custom_1_box
 annistonstar.com##.custom_hot_deal_image
 jobhits.co.uk##.cvads
@@ -30817,6 +30829,7 @@ free-tv-video-online.me##.dloadh
 orlydb.com##.dlright
 dreammining.com##.dm-adds
 dailymotion.com##.dmpi_masscast
+torrentz.eu##.dnotblcokmebro
 torrentz.eu##.dnotblockmebro
 nydailynews.com##.dod_img
 isup.me##.domain + p + center:last-child > a:first-child
@@ -30999,6 +31012,7 @@ mattgemmell.com##.fusion_attrib_footer
 chrisbrownworld.com,myplay.com##.fwas300x250
 masterworksbroadway.com##.fwas728x90_top
 prokerala.com##.gAS_468x60
+titantv.com##.gAd
 about.com##.gB
 free-games.net##.gPBoxAD
 search.babylon.com##.gRsAdw
@@ -31264,6 +31278,7 @@ arstechnica.com##.jobs-feed
 allthingsd.com##.jobs-module
 bnd.com##.jobs_widget_large
 ninemsn.com.au##.jobsearchBox
+toorgle.net##.join
 jpost.com##.jp-grid-oppsidepane
 jpost.com##.jp-grid-oppsidepane-home
 jpost.com##.jp-grid-sidepane
@@ -31980,7 +31995,6 @@ impactwrestling.com,newswireless.net##.rotator
 leadership.ng##.rotor
 leadership.ng##.rotor-items[style="width: 300px; height: 260px; visibility: visible;"]
 lonelyplanet.com##.row--leaderboard
-chron.com,ctpost.com,seattlepi.com##.row1
 bikechatforums.com##.row1[align="center"][valign="middle"][style="padding: 5px;"] > div[id][style="display: block;"]:first-child
 bikechatforums.com##.row2[align="center"][valign="middle"][style="padding: 5px;"] > div[id][style="display: block;"]:first-child
 bikechatforums.com##.row2[colspan="6"]
@@ -32286,6 +32300,7 @@ monsterindia.com##.sponsoreRes_rp
 92q.com,asktofriends.com,cnet.com,ecosia.org,examiner.co.uk,guardian.co.uk,hotklix.com,lycos.com,mamma.com,mywot.com,noscript.net,pcworld.com,phoenixnewtimes.com,rapidlibrary.com,seroundtable.com,torrentz.eu,torrentz.in,torrentz.me,trovit.co.uk,washingtonpost.com,yippy.com##.sponsored
 general-files.com##.sponsored-btn
 advisorone.com,cutimes.com,frommers.com,futuresmag.com##.sponsored-by
+chron.com##.sponsored-content
 itproportal.com##.sponsored-hub
 fbdownloader.com##.sponsored-info
 techtipsgeek.com##.sponsored-level
@@ -32622,6 +32637,7 @@ iwannawatch.net##.watch.external
 flashx.tv##.watch_left > div[style="height:36px;width:620px;margin-left:8px;"]
 coolspotters.com##.wau
 wincustomize.com##.wc_home_tour_loggedout
+wikidot.com##.wd-adunit
 dir.indiamart.com##.wd1
 yahoo.com##.wdpa1
 glamourvanity.com##.wdt_gads
@@ -33561,7 +33577,6 @@ bewired.info,mensnews.info##div[style="font-size:10px; text-align:right; color:#
 uk.news.yahoo.com##div[style="font-size:10px;font-family:Verdana,arial,sans-serif;text-align:center"]
 twitpic.com##div[style="font-size:12px;color:#cacaca;font-weight: normal;"]
 wallbase.cc##div[style="font-size:13px;padding:5px"]
-google.ca,google.co.nz,google.co.uk,google.com,google.com.au##div[style="font-size:14px;margin:0 4px;padding:1px 5px;background:#fff7ed"]
 technologyreview.com##div[style="font-size:93%; color:#666666; padding-bottom:3px;"]
 laptopmag.com##div[style="font-size:9px; color: black; margin-left: 2px;"]
 watertowndailytimes.com##div[style="font: bold .75em arial, sans-serif; color: #999; margin: 10px 0px 3px 0px; text-align: center; width: 250px;"]
@@ -34226,6 +34241,7 @@ limelinx.com##div[style="width:480px; height:60px;"]
 weatherbug.com##div[style="width:484px; height:125px; background:#FFFFFF; overflow:hidden;"]
 themesbase.com##div[style="width:486px;height:60px;margin:0 auto;line-height:60px;text-align:center;"]
 caymannewsservice.com##div[style="width:550px; height:100px; margin:0px auto;"]
+toorgle.net##div[style="width:550px;margin-bottom:15px;font-family:arial,serif;font-size:10pt;"]
 techgage.com##div[style="width:600px; height:74px;"]
 chrome-hacks.net##div[style="width:600px;height:250px;"]
 photoshoproadmap.com##div[style="width:620px; background-color:#ffffff; padding-left:0; margin:0 auto 20px auto; border-bottom:1px dotted black;"]
@@ -34326,6 +34342,7 @@ w3schools.com##div[style="width:960px;height:94px;position:relative;margin-left:
 w3schools.com##div[style="width:960px;height:94px;position:relative;margin:0px;margin-left:auto;margin-right:auto;margin-top:5px;margin-bottom:5px;padding:0px;overflow:hidden"]
 androidapps.com##div[style="width:970px; height:90px; float:right; margin:0 3px 20px 0;"]
 tigerdirect.ca##div[style="width:977px; clear:both; margin-top:2px; height:90px;"]
+ndtv.com##div[style="width:980px; margin:3px  auto;"]
 apphit.com##div[style="width:980px;height:100px;clear:both;margin:0 auto;"]
 independent.com##div[style^="background-image:url('http://media.independent.com/img/ads/ads-bg.gif')"]
 gamebanshee.com##div[style^="border:1px solid #b98027; width:300px;"]
@@ -34392,6 +34409,7 @@ fansshare.com##iframe[width="300"][height="250"]
 mouthshut.com##iframe[width="336"]
 nowwatchtvlive.com##iframe[width="460"]
 1tvlive.in,ahashare.com,casadossegredos.tv,thepiratebay.sx,tvdez.com,ziddu.com##iframe[width="728"]
+shoesession.com##iframe[width="732"]
 gamecopyworld.com##iframe[width="760"]
 devx.com##img[align="top"][width="108"]
 thecuttingedgenews.com##img[alt="Ad by The Cutting Edge News"]
@@ -35773,6 +35791,13 @@ accounts.google.com#@#.adwords
 ! Anti-Adblock
 ! Non-English
 ! *** easylist:easylist_adult/adult_whitelist_popup.txt ***
+! ---------- myfilter ----------
+!
+http://www.facebook.com/plugins/recommendations_bar.php?api_key=*
+http://ad.watch.impress.co.jp/*
+cloud.watch.impress.co.jp,kaden.watch.impress.co.jp,pc.watch.impress.co.jp,internet.watch.impress.co.jp,akiba-pc.watch.impress.co.jp,av.watch.impress.co.jp,k-tai.impress.co.jp##div#ex-page-extension
+cloud.watch.impress.co.jp,kaden.watch.impress.co.jp,pc.watch.impress.co.jp,internet.watch.impress.co.jp,akiba-pc.watch.impress.co.jp,av.watch.impress.co.jp,k-tai.impress.co.jp##div.extra
+www.gizmodo.jp##div#recommendUI
 !
 ! ---------- fanboy-japanese ----------
 ! ---------- Generic Blocking Rules ----------
@@ -36412,11 +36437,3 @@ yomiuri.co.jp##[style="margin:8px 0 8px;"]
 zdnet.com##DIV[class^="style_kwad_"]
 ~japantimes.co.jp###RightAdBlock
 ~lifehacker.jp,~kotaku.jp,~gizmodo.jp##.ad_head_rectangle
-!
-! ---------- myfilter ----------
-!
-http://www.facebook.com/plugins/recommendations_bar.php?api_key=*
-http://ad.watch.impress.co.jp/*
-cloud.watch.impress.co.jp,kaden.watch.impress.co.jp,pc.watch.impress.co.jp,internet.watch.impress.co.jp,akiba-pc.watch.impress.co.jp,av.watch.impress.co.jp,k-tai.impress.co.jp##div#ex-page-extension
-cloud.watch.impress.co.jp,kaden.watch.impress.co.jp,pc.watch.impress.co.jp,internet.watch.impress.co.jp,akiba-pc.watch.impress.co.jp,av.watch.impress.co.jp,k-tai.impress.co.jp##div.extra
-www.gizmodo.jp##div#recommendUI

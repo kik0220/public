@@ -1,5 +1,18 @@
 [Adblock Plus 1.1]
 ! Title: Easy modify List + Japanese Filter
+![Adblock Plus 2.0]
+! Checksum: hGkE2+txeNnxi/YLMsKvRg
+! Version: 201308051411
+! Title: EasyList
+! Last modified: 05 Aug 2013 14:11 UTC
+! Expires: 4 days (update frequency)
+! Homepage: https://easylist.adblockplus.org/
+! Licence: https://easylist-downloads.adblockplus.org/COPYING
+!
+! Please report any unblocked adverts or problems
+! in the forums (http://forums.lanik.us/)
+! or via e-mail (easylist.subscription@gmail.com).
+!
 !
 !-----------------------General advert blocking filters-----------------------!
 ! *** easylist:easylist/easylist_general_block.txt ***

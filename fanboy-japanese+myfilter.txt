@@ -1,10 +1,12 @@
 ! ---------- myfilter ----------
 !
-http://www.facebook.com/plugins/recommendations_bar.php?api_key=*
-http://ad.watch.impress.co.jp/*
+www.facebook.com/plugins/recommendations_bar.php?api_key=*
+ad.watch.impress.co.jp/*
 cloud.watch.impress.co.jp,kaden.watch.impress.co.jp,pc.watch.impress.co.jp,internet.watch.impress.co.jp,akiba-pc.watch.impress.co.jp,av.watch.impress.co.jp,k-tai.impress.co.jp##div#ex-page-extension
 cloud.watch.impress.co.jp,kaden.watch.impress.co.jp,pc.watch.impress.co.jp,internet.watch.impress.co.jp,akiba-pc.watch.impress.co.jp,av.watch.impress.co.jp,k-tai.impress.co.jp##div.extra
 www.gizmodo.jp##div#recommendUI
+biz-journal.jp##div#hashiraL
+biz-journal.jp##div#hashiraR
 !
 ! ---------- fanboy-japanese ----------
 ! ---------- Generic Blocking Rules ----------

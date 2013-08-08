@@ -1,3 +1,4 @@
+rm -f easylist.txt
 echo "[Adblock Plus 1.1]" > easy_modify_list.txt
 echo "! Title: Easy modify List" >> easy_modify_list.txt
 echo "! Update: "`date -I` >> easy_modify_list.txt

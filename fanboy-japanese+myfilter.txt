@@ -1,5 +1,6 @@
 ! ---------- myfilter ----------
 !
+hbb.afl.rakuten.co.jp/*
 www.facebook.com/plugins/recommendations_bar.php?api_key=*
 ad.watch.impress.co.jp/*
 cloud.watch.impress.co.jp,kaden.watch.impress.co.jp,pc.watch.impress.co.jp,internet.watch.impress.co.jp,akiba-pc.watch.impress.co.jp,av.watch.impress.co.jp,k-tai.impress.co.jp##div#ex-page-extension

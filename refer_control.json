@@ -1,0 +1,1 @@
+[{"id":"defaultAction","val":"dummy","type":"normal","filter":"","is3rd":true},{"id":1377473382880,"val":"http://image\\.itmedia\\.co\\.jp/","type":"specific","filter":"[TARGET_HOST]","isregexp":true,"isfrom":true,"isto":true,"is3rd":true},{"id":1377473408194,"val":"","type":"normal","filter":"","isregexp":false}]

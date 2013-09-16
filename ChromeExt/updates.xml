@@ -4,7 +4,7 @@
     <updatecheck codebase='https://raw.github.com/kik0220/public/master/ChromeExt/Amazon.jp.crx' version='0.0.1' />
   </app>
   <app appid='copeckljgchkdhmpfaclmmdkehbemhnd'>
-    <updatecheck codebase='https://raw.github.com/kik0220/public/master/ChromeExt/Facebook.crx' version='0.0.1' />
+    <updatecheck codebase='https://raw.github.com/kik0220/public/master/ChromeExt/Facebook.crx' version='0.0.2' />
   </app>
   <app appid='digbapiaihckkbiffjlhhpamojenhpdg'>
     <updatecheck codebase='https://raw.github.com/kik0220/public/master/ChromeExt/Feedly.crx' version='0.0.1' />

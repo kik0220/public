@@ -1,5 +1,6 @@
 ! ---------- myfilter ----------
 !
+yads.yahoo.co.jp/*
 hbb.afl.rakuten.co.jp/*
 www.facebook.com/plugins/recommendations_bar.php?api_key=*
 ad.watch.impress.co.jp/*

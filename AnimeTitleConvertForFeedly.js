@@ -1,4 +1,56 @@
+// ==UserScript==
+// @name       アニメタイトル変換 for Feedly
+// @version    0.0.9
+// @description  Feedlyに表示されるローマ字のアニメタイトルを日本語に変換します。下の配列に追加すれば好きなタイトルに対応できます。
+// @match      http://cloud.feedly.com/*
+// @match      https://cloud.feedly.com/*
+// @copyright  2013+, kik0220
+// ==/UserScript==
+
 var targets = {
+  // '' : '声優戦隊ボイストーム7',
+  // '' : 'ガンダムビルドファイターズ',
+  // '' : '機巧少女(マシンドール)は傷つかない',
+  // '' : '弱虫ペダル',
+  // '' : 'のんのんびより',
+  // '' : '蒼き鋼のアルペジオ -アルス・ノヴァ-',
+  // '' : '艦隊これくしょん～艦これ～',
+  // '' : '俺の脳内選択肢が、学園ラブコメを全力で邪魔している',
+  // '' : 'ガリレイドンナ',
+  // '' : 'サムライフラメンコ',
+  // '' : '革命機ヴァルヴレイヴ 2ndシーズン',
+  // '' : '東京レイヴンズ',
+  // '' : 'BLAZBLUE ALTER MEMORY',
+  // '' : 'pupa(ピューパ)',
+  'Yozakura Quartet - Hana no Uta' : '夜桜四重奏 ハナノウタ',
+  'ワルキューレロマンツェ' : 'ワルキューレロマンツェ',
+  'Sekai de Ichiban Tsuyoku Naritai!' : '世界でいちばん強くなりたい！',
+  'Meganebu!' : 'メガネブ！',
+  'Gingitsune' : 'ぎんぎつね',
+  'Magi' : 'マギ',
+  'Log Horizon' : 'ログ・ホライズン',
+  'Little Busters! Refrain' : 'リトルバスターズ！～Refrain～',
+  'White Album (2013)' : 'WHITE ALBUM 2',
+  'Hajime no Ippo' : 'はじめの一歩',
+  'Kuroko no Basuke' : '黒子のバスケ 第2期',
+  'Tesagure! Bukatsu-mono' : 'てさぐれ！部活もの',
+  'Dia no Ace' : 'ダイヤのA',
+  'Phi Brain - Kami no Puzzle (2013)' : 'ファイ・ブレイン～神のパズル 第3シリーズ',
+  'Kill la Kill' : 'キルラキル KILL la KILL',
+  'Freezing Vibration' : 'フリージング ヴァイブレーション',
+  'Yuusha ni Narenakatta Ore wa Shibushibu Shuushoku o Ketsui Shimashita.' : '勇者になれなかった俺はしぶしぶ就職を決意しました。',
+  'Strike the Blood' : 'ストライク・ザ・ブラッド',
+  'Super Seishun Brothers' : 'SuperSeisyunBrothers -超青春姉弟s-',
+  'Diabolik Lovers' : 'DIABOLIK LOVERS(ディアボリックラヴァーズ)',
+  'Miss Monochrome' : 'ミス・モノクローム',
+  'Coppelion' : 'COPPELION コッペリオン',
+  'Kyoukai no Kanata' : '境界の彼方',
+  'Kyousougiga' : '京騒戯画',
+  'Nagi no Asukara' : '凪のあすから',
+  'IS - Infinite Stratos 2' : 'IS＜インフィニット・ストラトス＞2',
+  'Outbreak Company' : 'アウトブレイク・カンパニー',
+  'Golden Time' : 'ゴールデンタイム',
+  'Miyakawa-ke no Kuufuku' : '宮河家の空腹',
   'Stella Jo-Gakuin Koutou-ka C3-Bu' : 'ステラ女学院高等科C3部[しーきゅーぶ]',
   'Danganronpa' : 'ダンガンロンパ',
   'Kibou no Gakuen to Zetsubou no Koukousei' : '希望の学園と絶望の高校生',
@@ -13,7 +65,7 @@ var targets = {
   'Rou Kyuu Bu' : 'ロウきゅーぶ',
   'Kin`iro Mosaic' : 'きんいろモザイク',
   'Fate - Kaleid Liner Prisma Illya' : 'Fate/kaleid liner プリズマ☆イリヤ',
-  'Gen&rsquoei o Kakeru Taiyou' : '幻影ヲ駆ケル太陽',
+  'Gen\'ei o Kakeru Taiyou' : '幻影ヲ駆ケル太陽',
   'Monogatari Series' : '＜物語＞シリーズ',
   'Kami-sama no Inai Nichiyoubi' : '神さまのいない日曜日',
   'High School DxD' : 'ハイスクールDxD',
@@ -57,7 +109,7 @@ var targets = {
   'Uchuu Kyoudai' : '宇宙兄弟',
   'Uta no Prince-sama' : 'うたの☆プリンスさまっ♪',
   'Yahari Ore no Seishun Love Come wa Machigatteiru.' : 'やはり俺の青春ラブコメはまちがっている。',
-  'Yondemasu yo,Azazel-san.' : 'よんでますよ、アザゼルさん。',
+  'Yondemasu yo, Azazel-san.' : 'よんでますよ、アザゼルさん。',
   'Yuyushiki' : 'ゆゆ式',
   'Zettai Bouei Leviathan' : '絶対防衛レヴィアタン'
 };

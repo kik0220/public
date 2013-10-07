@@ -27,4 +27,7 @@
   <app appid='abncajkmffhbcclhihcbhlecddplihdd'>
     <updatecheck codebase='https://raw.github.com/kik0220/public/master/ChromeExt/GitHub.crx' version='0.0.1' />
   </app>
+  <app appid='innikaadpkbcogenmnbmjhpflipkmhkl'>
+    <updatecheck codebase='https://raw.github.com/kik0220/public/master/ChromeExt/GoogleLocationHistory.crx' version='0.0.1' />
+  </app>
 </gupdate>

@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name       アニメタイトル変換 for Feedly
-// @version    0.0.9
+// @version    0.0.16
 // @description  Feedlyに表示されるローマ字のアニメタイトルを日本語に変換します。下の配列に追加すれば好きなタイトルに対応できます。
 // @match      http://cloud.feedly.com/*
 // @match      https://cloud.feedly.com/*
@@ -9,21 +9,21 @@
 
 var targets = {
   // '' : '声優戦隊ボイストーム7',
-  // '' : 'ガンダムビルドファイターズ',
-  // '' : '機巧少女(マシンドール)は傷つかない',
-  // '' : '弱虫ペダル',
-  // '' : 'のんのんびより',
-  // '' : '蒼き鋼のアルペジオ -アルス・ノヴァ-',
   // '' : '艦隊これくしょん～艦これ～',
-  // '' : '俺の脳内選択肢が、学園ラブコメを全力で邪魔している',
-  // '' : 'ガリレイドンナ',
-  // '' : 'サムライフラメンコ',
   // '' : '革命機ヴァルヴレイヴ 2ndシーズン',
-  // '' : '東京レイヴンズ',
-  // '' : 'BLAZBLUE ALTER MEMORY',
   // '' : 'pupa(ピューパ)',
+  'Galilei Donna' : 'ガリレイドンナ',
+  'Samurai Flamenco' : 'サムライフラメンコ',
+  'Ore no Nounai Sentakushi ga, Gakuen Lovecome o Zenryoku de Jama Shiteiru' : '俺の脳内選択肢が、学園ラブコメを全力で邪魔している',
+  'BlazBlue - Alter Memory' : 'BLAZBLUE ALTER MEMORY',
+  'Machine-Doll wa Kizutsukanai' : '機巧少女(マシンドール)は傷つかない',
+  'Yowamushi Pedal' : '弱虫ペダル',
+  'Non Non Biyori' : 'のんのんびより',
+  'Aoki Hagane no Arpeggio - Ars Nova' : '蒼き鋼のアルペジオ -アルス・ノヴァ-',
+  'Tokyo Ravens' : '東京レイヴンズ',
+  'Gundam Build Fighters' : 'ガンダムビルドファイターズ',
   'Yozakura Quartet - Hana no Uta' : '夜桜四重奏 ハナノウタ',
-  'ワルキューレロマンツェ' : 'ワルキューレロマンツェ',
+  'Walkure Romanze' : 'ワルキューレロマンツェ',
   'Sekai de Ichiban Tsuyoku Naritai!' : '世界でいちばん強くなりたい！',
   'Meganebu!' : 'メガネブ！',
   'Gingitsune' : 'ぎんぎつね',

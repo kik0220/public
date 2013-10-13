@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name       アニメタイトル変換 for Feedly
-// @version    0.0.16
+// @version    0.0.17
 // @description  Feedlyに表示されるローマ字のアニメタイトルを日本語に変換します。下の配列に追加すれば好きなタイトルに対応できます。
 // @match      http://cloud.feedly.com/*
 // @match      https://cloud.feedly.com/*
@@ -10,8 +10,8 @@
 var targets = {
   // '' : '声優戦隊ボイストーム7',
   // '' : '艦隊これくしょん～艦これ～',
-  // '' : '革命機ヴァルヴレイヴ 2ndシーズン',
   // '' : 'pupa(ピューパ)',
+  'Kakumeiki Valvrave 2' : '革命機ヴァルヴレイヴ 2ndシーズン',
   'Galilei Donna' : 'ガリレイドンナ',
   'Samurai Flamenco' : 'サムライフラメンコ',
   'Ore no Nounai Sentakushi ga, Gakuen Lovecome o Zenryoku de Jama Shiteiru' : '俺の脳内選択肢が、学園ラブコメを全力で邪魔している',
@@ -27,7 +27,7 @@ var targets = {
   'Sekai de Ichiban Tsuyoku Naritai!' : '世界でいちばん強くなりたい！',
   'Meganebu!' : 'メガネブ！',
   'Gingitsune' : 'ぎんぎつね',
-  'Magi' : 'マギ',
+  'Magi ' : 'マギ ',
   'Log Horizon' : 'ログ・ホライズン',
   'Little Busters! Refrain' : 'リトルバスターズ！～Refrain～',
   'White Album (2013)' : 'WHITE ALBUM 2',

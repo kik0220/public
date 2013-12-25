@@ -1,16 +1,13 @@
 // ==UserScript==
 // @name       アニメタイトル変換 for Feedly
-// @version    0.0.17
+// @version    0.0.18
 // @description  Feedlyに表示されるローマ字のアニメタイトルを日本語に変換します。下の配列に追加すれば好きなタイトルに対応できます。
-// @match      http://cloud.feedly.com/*
-// @match      https://cloud.feedly.com/*
+// @match      http://feedly.com/*
+// @match      https://feedly.com/*
 // @copyright  2013+, kik0220
 // ==/UserScript==
 
 var targets = {
-  // '' : '声優戦隊ボイストーム7',
-  // '' : '艦隊これくしょん～艦これ～',
-  // '' : 'pupa(ピューパ)',
   'Kakumeiki Valvrave 2' : '革命機ヴァルヴレイヴ 2ndシーズン',
   'Galilei Donna' : 'ガリレイドンナ',
   'Samurai Flamenco' : 'サムライフラメンコ',

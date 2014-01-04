@@ -1,12 +1,14 @@
 // ==UserScript==
 // @name         アニメタイトル変換 for Feedly
-// @version      0.0.19
+// @version      0.0.21
+// @author       kik0220
+// @namespace    https://sites.google.com/site/feedlytool/
 // @description  Feedlyに表示されるローマ字のアニメタイトルを日本語に変換します。下の配列に追加すれば好きなタイトルに対応できます。
+// @icon         http://feedlytool.kk22.jp/icon.png
 // @match        http://feedly.com/*
 // @match        https://feedly.com/*
 // @exclude      http://feedly.com/#welcome
 // @exclude      https://feedly.com/#welcome
-// @icon         http://feedlytool.kk22.jp/icon.png
 // @copyright    2013+, kik0220
 // ==/UserScript==
 
@@ -44,18 +46,18 @@ var targets = {
   // '' : '中二病でも恋がしたい！ 第2期',
   // '' : '咲-Saki- 全国編',
   // '' : '妖怪ウォッチ',
-  // '' : '最近、妹のようすがちょっとおかしいんだが。',
   // '' : '未確認で進行形',
   // '' : '桜Trick',
   // '' : '烈車戦隊トッキュウジャー',
   // '' : '熱風海陸ブシロード',
-  // '' : '生徒会役員共＊',
-  // '' : '絶滅危愚少女 Amazing Twins',
   // '' : '蟲師 特別篇「日蝕む翳」',
   // '' : '超ゼンマイロボ パトラッシュ',
   // '' : '銀の匙 第2期',
   // '' : '鬼灯の冷徹',
   // '' : '魔法戦争',
+  'Seitokai Yakuindomo' : '生徒会役員共',
+  'Saikin, Imouto no Yousu ga Chotto Okashiinda ga.' : '最近、妹のようすがちょっとおかしいんだが。',
+  'Zetsumetsu Kigu Shoujo - Amazing Twins' : '絶滅危愚少女 Amazing Twins',
   'Pupipo!' : 'プピポー！',
   'Kakumeiki Valvrave 2' : '革命機ヴァルヴレイヴ 2ndシーズン',
   'Galilei Donna' : 'ガリレイドンナ',

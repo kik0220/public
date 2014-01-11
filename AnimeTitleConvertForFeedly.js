@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         アニメタイトル変換 for Feedly
-// @version      0.0.23
+// @version      0.0.24
 // @author       kik0220
 // @namespace    https://sites.google.com/site/feedlytool/
 // @description  Feedlyに表示されるローマ字のアニメタイトルを日本語に変換します。下の配列に追加すれば好きなタイトルに対応できます。
@@ -14,10 +14,7 @@
 
 var targets = {
   // '' : 'Double Circle(ダブルサークル)',
-  // '' : 'Wake Up,Girls!',
-  // '' : 'Z/X IGNITION(ゼクスイグニッション)',
   // '' : 'うーさーのその日暮らし 覚醒編',
-  // '' : 'のうりん',
   // '' : 'みんな集まれ！ファルコム学園',
   // '' : 'ウィザード・バリスターズ～弁魔士セシル',
   // '' : 'ニセコイ',
@@ -27,14 +24,14 @@ var targets = {
   // '' : 'マケン姫っ！通',
   // '' : '世界征服～謀略のズヴィズダー～',
   // '' : '妖怪ウォッチ',
-  // '' : '桜Trick',
   // '' : '烈車戦隊トッキュウジャー',
   // '' : '熱風海陸ブシロード',
-  // '' : '蟲師 特別篇「日蝕む翳」',
   // '' : '超ゼンマイロボ パトラッシュ',
-  // '' : '銀の匙 第2期',
-  // '' : '鬼灯の冷徹',
-  // '' : '魔法戦争',
+  'Z-X - Ignition' : 'Z/X IGNITION(ゼクスイグニッション)',
+  'Nourin' : 'のうりん',
+  'Sakura Trick' : '桜Trick',
+  'Hoozuki no Reitetsu' : '鬼灯の冷徹',
+  'Mahou Sensou' : '魔法戦争',
   'Go! Go! 575' : 'GO！GO！575(ごーしちごー)',
   'Pupa' : 'pupa(ピューパ)',
   'Onee-chan ga Kita' : 'お姉ちゃんが来た',

@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         アニメタイトル変換 for Feedly
-// @version      0.0.24
+// @version      0.0.25
 // @author       kik0220
 // @namespace    https://sites.google.com/site/feedlytool/
 // @description  Feedlyに表示されるローマ字のアニメタイトルを日本語に変換します。下の配列に追加すれば好きなタイトルに対応できます。
@@ -16,17 +16,17 @@ var targets = {
   // '' : 'Double Circle(ダブルサークル)',
   // '' : 'うーさーのその日暮らし 覚醒編',
   // '' : 'みんな集まれ！ファルコム学園',
-  // '' : 'ウィザード・バリスターズ～弁魔士セシル',
-  // '' : 'ニセコイ',
   // '' : 'ハピネスチャージプリキュア！',
   // '' : 'ピクレレ',
   // '' : 'フューチャーカード バディファイト',
   // '' : 'マケン姫っ！通',
-  // '' : '世界征服～謀略のズヴィズダー～',
   // '' : '妖怪ウォッチ',
   // '' : '烈車戦隊トッキュウジャー',
   // '' : '熱風海陸ブシロード',
   // '' : '超ゼンマイロボ パトラッシュ',
+  'Wizard Barristers - Benmashi Cecil' : 'ウィザード・バリスターズ～弁魔士セシル',
+  'Nisekoi' : 'ニセコイ',
+  'Sekai Seifuku - Bouryaku no Zvezda' : '世界征服～謀略のズヴィズダー～',
   'Z-X - Ignition' : 'Z/X IGNITION(ゼクスイグニッション)',
   'Nourin' : 'のうりん',
   'Sakura Trick' : '桜Trick',

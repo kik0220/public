@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         アニメタイトル変換 for Feedly
-// @version      0.0.25
+// @version      0.0.26
 // @author       kik0220
 // @namespace    https://sites.google.com/site/feedlytool/
 // @description  Feedlyに表示されるローマ字のアニメタイトルを日本語に変換します。下の配列に追加すれば好きなタイトルに対応できます。
@@ -19,11 +19,12 @@ var targets = {
   // '' : 'ハピネスチャージプリキュア！',
   // '' : 'ピクレレ',
   // '' : 'フューチャーカード バディファイト',
-  // '' : 'マケン姫っ！通',
   // '' : '妖怪ウォッチ',
   // '' : '烈車戦隊トッキュウジャー',
   // '' : '熱風海陸ブシロード',
   // '' : '超ゼンマイロボ パトラッシュ',
+  'Maken-ki! Two' : 'マケン姫っ！通',
+  'Inari, Konkon, Koi Iroha.' : 'いなり、こんこん、恋いろは。',
   'Wizard Barristers - Benmashi Cecil' : 'ウィザード・バリスターズ～弁魔士セシル',
   'Nisekoi' : 'ニセコイ',
   'Sekai Seifuku - Bouryaku no Zvezda' : '世界征服～謀略のズヴィズダー～',
@@ -37,7 +38,7 @@ var targets = {
   'Onee-chan ga Kita' : 'お姉ちゃんが来た',
   'Strange Plus' : 'ストレンジプラス',
   'Hamatora The Animation' : 'ハマトラ',
-  'Chuunibyou demo Koi ga Shitai! Ren' : '中二病でも恋がしたい！ 第2期',
+  'Chuunibyou demo Koi ga Shitai! Ren' : '中二病でも恋がしたい！戀',
   'Mikakunin de Shinkoukei' : '未確認で進行形',
   'SoniAni' : 'そにアニ',
   'Toaru Hikuushi e no Koiuta' : 'とある飛空士への恋歌',

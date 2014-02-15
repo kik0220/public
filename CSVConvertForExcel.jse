@@ -1,0 +1,77 @@
+/*global WScript, ActiveXObject*/
+//----------------------------------------------------------
+// CSVファイルの数値だけのセルを文字列として読まれるように変換してExcelで開くプログラム
+//----------------------------------------------------------
+// 定数定義
+var charSetSJIS = "Shift-JIS", charSetUTF8 = "UTF-8", charSetEUCJP = "EUC-JP";
+var adCrLf = -1, adLf = 10, adCR = 13;
+var adTypeBinary = 1, adTypeText = 2;
+var adReadAll = -1,   adReadLine = -2;
+var adWriteLine = 1;
+var adSaveCreateNotExist = 1, adSaveCreateOverWrite = 2;
+// ドラッグ・アンド・ドロップされたファイルを取得
+var fileCount = WScript.Arguments.Count();
+if (fileCount === 0) {
+  WScript.echo("ファイルがありません。");
+  WScript.Quit();
+}
+var files = [];
+for(var i = 0; i < fileCount; i++) {
+  files.push(WScript.Arguments.Item(i));
+}
+// ファイルを1つずつ処理する
+for(i = 0; i < files.length; i++) {
+  var fileName = files[i];
+  // ファイルを読み込む
+  var csvOne = readFile(fileName);
+  var outFile = fileName + "_convert.csv";
+  // 一つのファイルへ保存
+  writeFile(outFile, csvOne, charSetSJIS);
+  openByExcel(outFile);
+}
+WScript.Quit();
+//----------------------------------------------------------
+// Excelで開く
+function openByExcel(fileName){
+  var excel = WScript.CreateObject("Excel.Application");
+  excel.Visible = true;
+  excel.Workbooks.Open(fileName);
+}
+// ファイルの読込み
+function readFile(fileName, charset) {
+  if (charset === undefined) {
+    charset = charSetSJIS;
+  }
+  var stream = new ActiveXObject("ADODB.Stream");
+  stream.Type = adTypeText;
+  stream.charset = charset;
+  stream.lineSeparator = adCrLf;
+  stream.Open();
+  stream.LoadFromFile(fileName);
+  stream.position = 0;
+  var text = "", line = "";
+  
+  while(!stream.EOS){
+    line = stream.ReadText(adReadLine);
+    line = line.replace(/("\d+")/g, "\"=\"$1\"\"");
+    text += line + "\n";
+  }
+  stream.Close();
+  return text;
+}
+// ファイルの保存
+function writeFile(fileName, text, charset) {
+  if (charset === undefined) {
+    charset = charSetSJIS;
+  }
+  var stream = new ActiveXObject("ADODB.Stream");
+  stream.Type = adTypeText;
+  stream.charset = charset;
+  stream.lineSeparator = adCrLf;
+  stream.Open();
+  stream.WriteText(text, adWriteLine);
+  stream.SaveToFile(fileName, adSaveCreateOverWrite);
+  stream.Close();
+}
+//----------------------------------------------------------
+

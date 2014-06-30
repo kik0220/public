@@ -1,6 +1,6 @@
 /*global WScript, ActiveXObject*/
 //----------------------------------------------------------
-// CSVファイルの数値だけのセルを文字列として読まれるように変換してExcelで開くプログラム
+// CSVファイルの数値だけのセルを文字列として読まれるように変換してExcelで開くプログラム V1.1.20140613
 //----------------------------------------------------------
 // 定数定義
 var charSetSJIS = "Shift-JIS", charSetUTF8 = "UTF-8", charSetEUCJP = "EUC-JP";
@@ -52,9 +52,9 @@ function readFile(fileName, sheet, charset) {
   
   while(!stream.EOS){
     line = stream.ReadText(adReadLine);
-    var items = line.split(/,/);
+    var items = line.split(/(^"|","|"$)/);
     for(var col = 0; col < items.length; col++){
-      sheet.Cells(row, col + 1).Value = items[col].replace(/(^"|"$)/g, "");
+      sheet.Cells(row, col + 1).Value = items[col];
     }
     row++;
   }

@@ -9,6 +9,12 @@ cloud.watch.impress.co.jp,kaden.watch.impress.co.jp,pc.watch.impress.co.jp,inter
 www.gizmodo.jp##div#recommendUI
 biz-journal.jp##div#hashiraL
 biz-journal.jp##div#hashiraR
+appbankstore.jp/*
+im-apps.net/*
+impact-ad.jp/*
+nakanohito.jp/*
+popin.cc/*
+rp.appbank.net/*
 !
 ! ---------- fanboy-japanese ----------
 ! ---------- Generic Blocking Rules ----------

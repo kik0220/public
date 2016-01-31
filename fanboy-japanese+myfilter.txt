@@ -15,6 +15,7 @@ impact-ad.jp/*
 nakanohito.jp/*
 popin.cc/*
 rp.appbank.net/*
+||employment.en-japan.com/html/pr/ad/*
 !
 ! ---------- fanboy-japanese ----------
 ! ---------- Generic Blocking Rules ----------

@@ -16,6 +16,9 @@ nakanohito.jp/*
 popin.cc/*
 rp.appbank.net/*
 ||employment.en-japan.com/html/pr/ad/*
+news.mynavi.jp###str-contentsleft > .lyt-btn-innerhdg.lyt-hdg-02:nth-of-type(14)
+news.mynavi.jp###str-contentsleft > #shopItems
+news.mynavi.jp###str-contentsleft > #admini
 !
 ! ---------- fanboy-japanese ----------
 ! ---------- Generic Blocking Rules ----------

@@ -1,0 +1,1 @@
+javascript:(function(){var u=document.location.href;var l=u.match(/\/@([\d\.]+),([\d\.]+),/);open('http://rank-info.net/ingress/ingressupcmap.html?lat='+l[1]+'&lon='+l[2]);})();
